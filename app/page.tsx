@@ -283,7 +283,7 @@ const envoyerReservation = async () => {
             <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
 
               <img
-                src="/images/dzahadjou.png"
+                src="/images/dzaha.png"
                 alt="Dzahadjou"
                 className="w-full h-64 object-cover"
               />
@@ -361,7 +361,7 @@ const envoyerReservation = async () => {
             />
 
             <img
-              src="/images/Safarikim2022.png"
+              src="/images/Safari22.png"
               className="rounded-3xl shadow-lg h-72 w-full object-cover hover:scale-105 transition duration-300"
             />
 
