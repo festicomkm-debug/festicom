@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import AdminSidebar from "@/components/AdminSidebar";
 
 type Reservation = {
   reservation_number: string;
@@ -138,9 +139,35 @@ Merci et à bientôt !`
     fetchReservations();
   }
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+<div className="flex">
+
+<AdminSidebar />
+
+<div className="flex-1 bg-gray-100 min-h-screen p-6">
       <h1 className="text-3xl font-bold mb-6">
         Administration FESTICOM
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+  <div className="bg-white rounded-lg shadow p-5">
+    <p className="text-gray-500">Total des inscriptions</p>
+    <h2 className="text-3xl font-bold">
+      {reservations.length}
+    </h2>
+  </div>
+
+  <div className="bg-green-100 rounded-lg shadow p-5">
+    <p>Paiements validés</p>
+    <h2 className="text-3xl font-bold">
+      {reservations.filter(r => r.paiement === "Payé").length}
+    </h2>
+  </div>
+
+  <div className="bg-blue-100 rounded-lg shadow p-5">
+    <p>Billets utilisés</p>
+    <h2 className="text-3xl font-bold">
+      {reservations.filter(r => r.statut === "Utilisé").length}
+    </h2>
+  </div>
+</div>
       </h1>
 
       <div className="mb-6">
@@ -246,6 +273,7 @@ Merci et à bientôt !`
           </tbody>
         </table>
       </div>
-    </div>
-  );
+      </div>
+</div>
+);
 }
