@@ -775,7 +775,7 @@ Merci de confirmer ma réservation.`;
         </h3>
 
         <p className="mt-4">
-          FESTICOM – Moroni Coulé
+          FESTICOM – Moroni Oisis à coté de DHL
         </p>
 
        <button

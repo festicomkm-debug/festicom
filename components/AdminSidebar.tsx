@@ -21,6 +21,10 @@ const menus = [
     href: "/admin/paiements",
   },
   {
+  title: "🧑‍💼 Gestion du STAFF",
+  href: "/admin/staff",
+},
+  {
     title: "📊 Statistiques",
     href: "/admin/statistiques",
   },
